@@ -1,17 +1,19 @@
 {
   "name": "godot-uid-sync",
   "displayName": "Godot UID Sync",
-  "description": "Automatically sync .uid files when renaming or moving Godot resource files in VS Code.",
   "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.102.0"
+  "description": "Automatically sync .uid files when renaming or moving Godot resource files in VS Code.",
+  "author": {
+    "name": "masatoko"
   },
-  "categories": [
-    "Other"
-  ],
+  "categories": ["Other"],
+  "pricing": "Free",
   "activationEvents": [
     "onStartupFinished"
   ],
+  "engines": {
+    "vscode": "^1.102.0"
+  },
   "main": "./out/extension.js",
   "contributes": {
     "configuration": {
@@ -77,5 +79,11 @@
     "typescript": "^5.8.3",
     "@vscode/test-cli": "^0.0.11",
     "@vscode/test-electron": "^2.5.2"
-  }
+  },
+  "license": "See LICENSE file",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/masatoko/godot-uid-sync.git"
+  },
+  "homepage": "https://github.com/masatoko/godot-uid-sync/README.md"
 }
