@@ -1,7 +1,7 @@
 {
   "name": "godot-uid-sync",
   "displayName": "Godot UID Sync",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Automatically sync .uid files when renaming or moving Godot resource files in VS Code.",
   "author": {
     "name": "masatoko"
