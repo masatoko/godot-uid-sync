@@ -1,0 +1,81 @@
+{
+  "name": "godot-uid-sync",
+  "displayName": "Godot UID Sync",
+  "description": "Automatically sync .uid files when renaming or moving Godot resource files in VS Code.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Godot UID Sync",
+      "properties": {
+        "godotUidSync.enabledOnlyInGodotProjects": {
+          "type": "boolean",
+          "default": false,
+          "description": "Only activate this extension if a 'project.godot' file exists in the workspace. (Requires window reload)"
+        },
+        "godotUidSync.excludeExtensions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "File extensions to ignore when checking for .uid files. Include the dot (e.g., .png)"
+        },
+        "godotUidSync.linkedExtensions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": [".uid"],
+          "description": "List of file extensions to rename together with associated Godot resources (e.g., .uid, .meta)."
+        },
+        "godotUidSync.revealOutputOnInfo": {
+          "type": "boolean",
+          "default": true,
+          "description": "If true, the output panel will open on info messages. Logs are still written even if this is false."
+        },
+        "godotUidSync.revealOutputOnWarn": {
+          "type": "boolean",
+          "default": true,
+          "description": "If true, the output panel will open on warning messages. Logs are still written even if this is false."
+        },
+        "godotUidSync.revealOutputOnError": {
+          "type": "boolean",
+          "default": true,
+          "description": "If true, the output panel will open on error messages. Logs are still written even if this is false."
+        },
+        "godotUidSync.showVerbose": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show additional tips or internal verbose logs in the output panel. Recommended to turn this off once you understand how the extension works."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc --watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.102.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
