@@ -1,4 +1,4 @@
-[English](https://github.com/masatoko/godot-uid-sync/README.md) | [日本語](https://github.com/masatoko/godot-uid-sync/README-ja.md)
+[English](https://github.com/masatoko/godot-uid-sync/blob/main/README.md) | [日本語](https://github.com/masatoko/godot-uid-sync/blob/main/README-ja.md)
 
 # Godot UID Sync（日本語版）
 
