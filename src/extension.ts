@@ -37,7 +37,7 @@ function logError(message: string, error?: unknown) {
 
 function showVerboseInstruction() {
 	if (showVerbose) {
-		logVerbose("Tip: You can disable automatic output panel display by setting `Reveal Output On xxxx` to false in your settings.");
+		logVerbose("Tip: You can disable automatic output panel display by setting `Reveal Output On {Info | Warn | Error}` to `false` in your settings.");
 	}
 }
 
