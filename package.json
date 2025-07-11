@@ -7,6 +7,11 @@
     "name": "masatoko"
   },
   "categories": ["Other"],
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#005588",
+    "theme": "dark"
+  },
   "pricing": "Free",
   "activationEvents": [
     "onStartupFinished"
