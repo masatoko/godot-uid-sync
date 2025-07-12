@@ -1,6 +1,7 @@
 {
   "name": "godot-uid-sync",
   "displayName": "Godot UID Sync",
+  "publisher": "masatoko",
   "version": "0.1.0",
   "description": "Automatically sync .uid files when renaming or moving Godot resource files in VS Code.",
   "author": {
@@ -72,7 +73,8 @@
     "compile": "tsc -p ./",
     "watch": "tsc --watch -p ./",
     "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "package": "vsce package -o dist/"
   },
   "devDependencies": {
     "@types/vscode": "^1.102.0",
