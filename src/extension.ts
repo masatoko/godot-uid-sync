@@ -47,7 +47,7 @@ function getConfParamOf<T>(paramName: string, defaultValue: T, toStringFunc: (va
 	const config = vscode.workspace.getConfiguration(MODULE_NAME);
 	const param = config.get<T>(paramName);
 	if (param !== undefined) {
-		logInfo(`Loaded ${paramName}: ${toStringFunc(param)}`);
+		logInfo(`Loaded parameter '${paramName}': ${toStringFunc(param)}`);
 	} else {
 		logError(`Loading parameter '${paramName}' failed.`);
 	}
@@ -94,14 +94,19 @@ async function isGodotProject(): Promise<boolean> {
 export async function activate(context: vscode.ExtensionContext) {
 	logInfoInternal("Activating extension godot-uid-sync ...", false); // revealOutput should be false for non-Godot projects.
 
-	// Only proceed if the workspace is a Godot project
+	// Only proceed if the workspace is a Godot project (when enabledOnlyInGodotProjects == true)
 	const enabledOnlyInGodotProjects = getConfParamOf<boolean>(PARAM_NAME.enabledOnlyInGodotProjects, false, toString);
 	if (enabledOnlyInGodotProjects) {
+		logInfoInternal(`'${PARAM_NAME.enabledOnlyInGodotProjects}' is true, checking for 'project.godot'...`, false);
 		const isGodot = await isGodotProject();
-		if (!isGodot) {
-			logInfoInternal("Not a Godot project. Skipping activation.", false); // revealOutput should be false for non-Godot projects.
+		if (isGodot) {
+			logInfoInternal("'project.godot' found. Proceeding with activation.", false);
+		} else {
+			logInfoInternal("No 'project.godot' found. Skipping activation.", false); // revealOutput should be false for non-Godot projects.
 			return;
 		}
+	} else {
+		logInfoInternal(`'${PARAM_NAME.enabledOnlyInGodotProjects}' is false, activating unconditionally.`, false);
 	}
 
 	loadConfigParameters();
