@@ -4,6 +4,8 @@
 
 **Godot UID Sync** is a Visual Studio Code extension that automatically synchronizes `.uid` files when Godot resource files (e.g., `.tscn`, `.gd`, `.cs`, `.gdshader`, etc.) are renamed or moved. This helps prevent broken references in Godot projects by keeping `.uid` files aligned with their corresponding assets.
 
+![Automatic UID Sync on Rename](images/uid-auto-sync.png)
+
 ## Features
 
 * Automatically renames or moves `.uid` files along with associated Godot resources.

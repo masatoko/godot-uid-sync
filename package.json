@@ -90,7 +90,7 @@
   "license": "See LICENSE file",
   "repository": {
     "type": "git",
-    "url": "https://github.com/masatoko/godot-uid-sync.git"
+    "url": "https://github.com/masatoko/godot-uid-sync/"
   },
   "homepage": "https://github.com/masatoko/godot-uid-sync/README.md"
 }
