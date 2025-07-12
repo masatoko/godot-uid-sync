@@ -14,7 +14,7 @@
 * Customizable list of linked extensions (e.g., `.uid`, `.meta`).
 * Configurable logging options for output visibility.
 
-## Requirements
+## Recommended Settings
 
 To prevent clutter in the file explorer, it is recommended to hide `.uid` files by adding the following to your VS Code `settings.json`:
 
@@ -23,6 +23,11 @@ To prevent clutter in the file explorer, it is recommended to hide `.uid` files 
   "**/*.uid": true
 }
 ```
+
+## Recommended: Check the Output Log
+
+When you rename a file, I recommend checking the **"Output" tab** to ensure that the `.uid` file (and any other linked extensions) was renamed correctly.  
+If nothing appears in the output, it likely means that no UID renaming was performed.
 
 ## Extension Settings
 
