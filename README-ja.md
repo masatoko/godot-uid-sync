@@ -28,30 +28,23 @@
 
 この拡張機能には以下の設定オプションがあります：
 
-* `godotUidSync.enabledOnlyInGodotProjects`（boolean、初期値：`false`）
+- **`godotUidSync.enabledOnlyInGodotProjects`**（boolean、デフォルト: `false`）  
+  ワークスペースに `project.godot` ファイルが存在する場合のみ拡張機能を有効にします。※ウィンドウの再読み込みが必要です。
 
-  * `project.godot` が存在するワークスペースでのみ有効化。
+- **`godotUidSync.excludeExtensions`**（string[]、デフォルト: `[]`）  
+  `.uid` ファイルのチェック時に無視するファイル拡張子の一覧。ドットを含めて記述します（例: `.png`）。
 
-* `godotUidSync.excludeExtensions`（string 配列、初期値：`[]`）
+- **`godotUidSync.linkedExtensions`**（string[]、デフォルト: `[".uid"]`）  
+  Godotリソースと一緒にリネーム・移動される拡張子の一覧（例: `.uid`, `.meta` など）。
 
-  * 同期から除外するファイル拡張子（例：`.png`）。ドットを含める必要があります。
+- **`godotUidSync.revealOutputOnInfo`**（boolean、デフォルト: `true`）  
+  情報メッセージが出力されたときに出力パネルを自動的に表示します。無効にしてもログは記録されます。
 
-* `godotUidSync.linkedExtensions`（string 配列、初期値：`[".uid"]`）
+- **`godotUidSync.revealOutputOnWarn`**（boolean、デフォルト: `true`）  
+  警告メッセージが出力されたときに出力パネルを自動的に表示します。無効にしてもログは記録されます。
 
-  * 同期対象とする拡張子のリスト。
+- **`godotUidSync.revealOutputOnError`**（boolean、デフォルト: `true`）  
+  エラーメッセージが出力されたときに出力パネルを自動的に表示します。無効にしてもログは記録されます。
 
-* `godotUidSync.revealOutputOnInfo`（boolean、初期値：`true`）
-
-  * 情報メッセージ時に出力パネルを表示。
-
-* `godotUidSync.revealOutputOnWarn`（boolean、初期値：`true`）
-
-  * 警告時に出力パネルを表示。
-
-* `godotUidSync.revealOutputOnError`（boolean、初期値：`true`）
-
-  * エラー時に出力パネルを表示。
-
-* `godotUidSync.showVerbose`（boolean、初期値：`true`）
-
-  * 詳細な内部ログとヒントを表示。
+- **`godotUidSync.showVerbose`**（boolean、デフォルト: `true`）  
+  詳細なヒントや内部ログを出力パネルに表示します。拡張機能の挙動が理解できたらオフにするのがおすすめです。

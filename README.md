@@ -28,23 +28,23 @@ To prevent clutter in the file explorer, it is recommended to hide `.uid` files 
 
 This extension contributes the following settings:
 
-* `godotUidSync.enabledOnlyInGodotProjects` (boolean, default: `false`):
-  Only activate if a `project.godot` file exists in the workspace.
+- **`godotUidSync.enabledOnlyInGodotProjects`** (boolean, default: `false`)  
+  Only activate this extension if a `project.godot` file exists in the workspace. *(Requires window reload)*
 
-* `godotUidSync.excludeExtensions` (string\[], default: `[]`):
-  File extensions to ignore during `.uid` syncing. Include the dot (e.g., `.png`).
+- **`godotUidSync.excludeExtensions`** (string[], default: `[]`)  
+  File extensions to ignore when checking for `.uid` files. Include the dot (e.g., `.png`).
 
-* `godotUidSync.linkedExtensions` (string\[], default: `[".uid"]`):
-  Extensions to sync alongside primary Godot resource files.
+- **`godotUidSync.linkedExtensions`** (string[], default: `[".uid"]`)  
+  List of file extensions to rename together with associated Godot resources (e.g., `.uid`, `.meta`).
 
-* `godotUidSync.revealOutputOnInfo` (boolean, default: `true`):
-  Show the output panel on informational messages.
+- **`godotUidSync.revealOutputOnInfo`** (boolean, default: `true`)  
+  If `true`, the output panel will open on info messages. Logs are still written even if this is `false`.
 
-* `godotUidSync.revealOutputOnWarn` (boolean, default: `true`):
-  Show the output panel on warnings.
+- **`godotUidSync.revealOutputOnWarn`** (boolean, default: `true`)  
+  If `true`, the output panel will open on warning messages. Logs are still written even if this is `false`.
 
-* `godotUidSync.revealOutputOnError` (boolean, default: `true`):
-  Show the output panel on errors.
+- **`godotUidSync.revealOutputOnError`** (boolean, default: `true`)  
+  If `true`, the output panel will open on error messages. Logs are still written even if this is `false`.
 
-* `godotUidSync.showVerbose` (boolean, default: `true`):
-  Display extra tips and verbose internal logs.
+- **`godotUidSync.showVerbose`** (boolean, default: `true`)  
+  Show additional tips or internal verbose logs in the output panel. Recommended to turn this off once you understand how the extension works.
