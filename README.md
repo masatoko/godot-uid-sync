@@ -37,10 +37,10 @@ This extension contributes the following settings:
   Only activate this extension if a `project.godot` file exists in the workspace. *(Requires window reload)*
 
 - **`godotUidSync.excludeExtensions`** (string[], default: `[]`)  
-  File extensions to ignore when checking for `.uid` files. Include the dot (e.g., `.png`).
+  List of file extensions to **exclude** from rename/move monitoring for associated .uid files. Include the dot (e.g., `.png`).
 
 - **`godotUidSync.linkedExtensions`** (string[], default: `[".uid"]`)  
-  List of file extensions to rename together with associated Godot resources (e.g., `.uid`, `.meta`).
+  List of file extensions to rename together with associated Godot resources. Include the dot (e.g., `.uid`, `.meta`).
 
 - **`godotUidSync.revealOutputOnInfo`** (boolean, default: `true`)  
   If `true`, the output panel will open on info messages. Logs are still written even if this is `false`.

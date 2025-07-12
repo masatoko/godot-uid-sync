@@ -37,13 +37,13 @@
             "type": "string"
           },
           "default": [],
-          "description": "File extensions to ignore when checking for .uid files. Include the dot (e.g., .png)"
+          "description": "List of file extensions to exclude from rename/move monitoring for associated .uid files. Include the dot (e.g., .png)"
         },
         "godotUidSync.linkedExtensions": {
           "type": "array",
           "items": { "type": "string" },
           "default": [".uid"],
-          "description": "List of file extensions to rename together with associated Godot resources (e.g., .uid, .meta)."
+          "description": "List of file extensions to rename together with associated Godot resources. Include the dot (e.g., .uid, .meta)"
         },
         "godotUidSync.revealOutputOnInfo": {
           "type": "boolean",
